@@ -136,16 +136,16 @@ describe('Plugin', () => {
               logger.info('message')
 
               expect(opts.mixin).to.have.been.called
-  
+
               expect(stream.write).to.have.been.called
-  
+
               const record = JSON.parse(stream.write.firstCall.args[0].toString())
-  
+
               expect(record.dd).to.deep.include({
                 trace_id: span.context().toTraceId(),
                 span_id: span.context().toSpanId()
               })
-  
+
               expect(record).to.have.deep.property('msg', 'message')
               expect(record).to.have.deep.property('addedMixin', true)
             })
