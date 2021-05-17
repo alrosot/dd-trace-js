@@ -86,5 +86,11 @@
       "name": "pg-native",
       "versions": ["3.0.0"]
     }
+  ],
+  "pino": [
+    {
+      "name": "pino-pretty",
+      "versions": ["3.0.0"]
+    }
   ]
 }

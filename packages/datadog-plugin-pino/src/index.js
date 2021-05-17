@@ -101,6 +101,8 @@ module.exports = [
     versions: ['>=3'],
     file: 'lib/utils.js',
     patch (utils, tracer, config) {
+      if (!tracer._logInjection) return
+
       this.wrap(utils, 'prettifyObject', createWrapPrettifyObject(tracer, config))
     },
     unpatch (utils) {
