@@ -90,7 +90,7 @@
   "pino": [
     {
       "name": "pino-pretty",
-      "versions": ["3.0.0"]
+      "versions": ["4.0.0"]
     }
   ]
 }
